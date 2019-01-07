@@ -1,0 +1,834 @@
+* {
+  max-width: 1030px;
+  margin: 0 auto;
+
+}
+
+html {
+  background-color: #cecdd0;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+ul {
+  padding: 0;
+}
+
+/* Header */
+/* Flexbox for Title, Notification, and User */
+#header {
+  width: 100%;
+  background-color: #6760A9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* YourApp Title Design  */
+
+.first-word {
+  display: flex;
+  align-items: center;
+  margin:0 0 0 1em;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.second-word {
+  font-weight: 100;
+  color: #E9E7EF;
+}
+
+.trademark {
+  color: #E9E7EF;
+}
+
+/* Notification Flex-Container  */
+
+.notifications {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin:0 1em 0 0;
+  font-size: 2em;
+}
+
+/* Bell-icon, and Border design */
+
+.bell-border {
+  display: flex;
+  padding: .2em .5em;
+  border-right: 1px solid #4D4780;
+  cursor: pointer;
+}
+
+.bell-icon {
+  width: 24px;
+  height: 30px;
+}
+
+.bell-lt {
+  background-color: #7DBE6F;
+  width: .2em;
+  height: .2em;
+  border-radius: 50%;
+}
+
+/* User Icon and Name  */
+
+.user-icon {
+  border-radius: 50%;
+  padding: .6em 0;
+  margin-left: .5em;
+  width: 30px;
+  height: 30px;
+}
+
+.user-name {
+  margin: 0 0 0 .5em;
+  color: #E9E7EF;
+  font-weight: 100;
+  font-size: .4em;
+  letter-spacing: 1.2px;
+}
+
+/* Main Flex container */
+
+#main-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+/* Nav-Bar Flex container */
+
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #402F74;
+  width: 100%;
+}
+
+/* Nav-Icon Design */
+
+.nav-icon {
+  width: 25px;
+  padding: 25px;
+  height: 25px;
+  margin: 0;
+}
+
+.ic {
+  fill: currentColor;
+  color: #888297;
+}
+
+.nav-icon:nth-of-type(1) {
+  border: 2px solid #7DBE6F;
+}
+
+.selected {
+  fill: currentColor;
+  color: #fff;
+}
+
+/* #dashboard Flex container */
+
+#dashboard {
+  flex: 1;
+  width: 100%;
+}
+
+/* Title and Search Field Design */
+
+.top-container {
+  display: flex;
+  flex-flow: row;
+}
+
+.top-title {
+  font-weight: 100;
+  color: #494554;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  padding: 1em;
+}
+
+/* Search <form> */
+.srch-exp {
+  display: flex;
+  background-color: #E8E7E9;
+  border-left: 1px solid #D8D8DA;
+  border-bottom: 1px solid #D8D8DA;
+  flex: 1;
+}
+
+/* Search <input> */
+.srch-fld
+ {
+  align-self:center;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 100;
+  color: grey;
+  padding: 10px 1em;;
+  background-image: url(icons/search.svg);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  background-size: 15px;
+  border: 1px solid #DBDBDC;
+  border-radius: 8px;
+  margin: 0 2%;
+}
+
+/* Alert Box */
+.alrt-bx {
+  font-weight: 100;
+  color: #fff;
+  font-size: .8em;
+  letter-spacing: 1px;
+  padding: 1em;
+  background-color: #6760A9;
+  margin: 2.5% 2% 0 2%;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Alert Title */
+.alrt {
+  font-weight: bold;
+  margin-right: 2%;
+  align-items: flex-start;
+}
+
+/* Alert Message */
+.alrt-txt {
+  flex: 1;
+}
+
+/* X'it */
+.chx {
+  font-weight: 500;
+  font-stretch: ultra-expanded;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.trf-fltr {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #494554;
+
+}
+
+/* Headline(s) title and margin */
+.trf-tle,
+.dly-tle,
+.mbl-tle,
+.chrt-fltr {
+  margin:3% 0 2% 2%;
+}
+
+.trf-tle,
+.dly-tle,
+.mbl-tle,
+.scl-tle,
+.pst-tle,
+.msg-tle,
+.set-tle {
+  font-weight: 100;
+  font-size: 14px;
+  color: #494554;
+}
+
+/* Traffic Chart Nav */
+.chrt-fltr {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+}
+
+.chrt-fltr li:hover {
+  cursor: pointer;
+}
+
+.selected {
+  color: #fff;
+  background-color: #7DBE6F;
+  border-radius: 16px;
+}
+
+.tab-fltr {
+
+  margin: 0 .8em 0 0;
+  padding: 4px .8em;
+  font-size: 15px;
+}
+
+/* Traffic Chart Style */
+.trf-chrt {
+  position: relative;
+  height: 23vh;
+  width: 47vh;
+}
+
+/* Daily and Mobile Chart Style */
+.dly-mbl {
+  display:flex;
+  flex-direction: column;
+}
+
+.dly-chrt,
+.mbl-usr {
+  margin: 0;
+  border-bottom: 1px solid #D8D8DA;
+  border-top: 1px solid #D8D8DA;
+  border-left: 1px solid #D8D8DA;
+  flex: 1;
+  max-width:   100%;
+}
+
+.dly-tle,
+.mbl-tle,
+.scl-tle {
+  padding:1.5% 0 1.5% 2%;
+}
+
+.dly-style{
+  position: relative;
+  height: 23vh;
+  width: 47vh;
+}
+
+.mbl-style{
+  position: relative;
+  height: 20vh;
+  width: 47vh;
+}
+
+/* Mobile Legend */
+.legend {
+  font-size: 12px;
+  position: relative;
+  left: 80%;
+  bottom: 100px;
+}
+
+.phone:before,
+.tablet:before,
+.desktop:before {
+  position: absolute;
+  content: '';
+  width: 13px;
+  height: 13px;
+  background-color: #7DBE6F;
+  left: -20px;
+  top: 1px;
+}
+
+.tablet:before {
+  background-color: rgba(65, 182, 200, 1);
+}
+
+.desktop:before {
+  background-color: #6760a9;
+}
+
+/* Social Stats */
+
+.scl-wdgt {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width:100%;
+}
+
+/* Social Widget Base */
+.wdgt {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 70%;
+  padding:  0 2.5em 0 0;
+  border: 1px solid #D8D8DA;
+  border-radius: 5px;
+  margin-bottom: 4%;
+  background-color: rgba(195,194,195,0.08);
+}
+
+.scl-txt--1 {
+  margin-right: -1%;
+  margin-left: 10%;
+}
+
+.scl-crcle {
+  background-color: #6760a9;
+  border-radius: 50%;
+  padding: 12px;
+  margin: 20px 0;
+}
+
+.scl-cntnr {
+  width: 20%;
+}
+
+/* Widget Title */
+.scl-name {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-left: 5px;
+  color: #6760a9;
+  letter-spacing: 1.2px;
+}
+
+/* Widget Followers */
+.scl-stat {
+  font-size: 3em;
+  font-weight: 100;
+  color: #494554;
+}
+
+/* New Members and Recent Activity DESIGN */
+
+/* Member and Activity Containers */
+.new-members,
+.recent-activity {
+  width: 100%;  /* 50% @medai */
+  border: 1px solid #D8D8DA;
+  padding-bottom: 1%;
+}
+
+.pst-tle {
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-bottom: 1%;
+}
+
+.new-sub {
+  display: flex;
+  border-bottom: 1px solid #D8D8DA;
+  width: 95%;
+  padding: 10px 0 10px 10px;
+  margin-left: 1%;
+}
+
+.new-sub:last-of-type {
+  border: none;
+}
+
+.sub-icn {
+  margin: 0;
+}
+
+.sub-icn img {
+  border-radius: 50%;
+  margin-right: 15%;
+  width: 30px;
+  height: 30px;
+}
+.sub-info  {
+  margin-left: 2%;
+}
+.sub-info a {
+  text-decoration: none;
+  color: #6760a9;
+}
+
+.sub-date {
+  margin-top: 2%;
+  margin-right: 0;
+}
+
+/* Member Info Styling */
+.sub-info,
+.sub-date {
+  font-size: 13px;
+  color: #494554;
+}
+
+/* Member Post Styling */
+.sub-post {
+  font-size: 13px;
+  color: #494554;
+  margin-left: 2%;
+}
+
+.sub-lnk {
+  margin: 0;
+}
+
+/* Member post link style */
+.link{
+  font-size: 18px;
+  font-weight: 100;
+  color: #6760a9;
+  text-decoration: none;
+}
+
+/* Message User and Settings */
+
+.msg-usr,
+.usr-set {
+  padding: 1%;
+  width: 100%; /* 50% @media */
+  border-top: 1px solid #D8D8DA;
+  border-left: 1px solid #D8D8DA;
+  border-right: 1px solid #D8D8DA;
+  margin-bottom: 5%;
+}
+
+/* Form(s) Design */
+
+.srch-usr,
+.msg-area,
+.msg-submit {
+  font-size: 15px;
+  font-weight: 100;
+  padding: 10px 1em;;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.srch-auto {
+  display: none;
+  font-size: 15px;
+  font-weight: 100;
+  color: #494554;
+  list-style: none;
+  text-transform: uppercase;
+  margin: 0 5% 1.5% 1%;
+  width: 90%;
+}
+
+.visible {
+  display: block;
+}
+
+.highlighted {
+  background-color: #d8d8da;
+  border: 1px solid #000;
+}
+
+.srch-usr,
+.msg-area,
+.input-text {
+  border: 1px solid #DBDBDC;
+  background-color: rgba(195,194,195,0.08);
+  color: grey;
+}
+
+.msg-tle,
+.srch-usr,
+.msg-area,
+.msg-submit {
+  margin: 1.5% 5% 1.5% 1%;
+}
+
+.set-tle,
+.set-note {
+  margin: 1.5% 1% 1.5% 5%;
+}
+
+.srch-usr {
+  width: 84%;
+}
+
+.msg-area {
+  width: 84%;
+}
+
+.msg-submit {
+  color: #fff;
+  background-color: #6760a9;
+  width: 92%;
+}
+
+.set-note {
+  font-size: 17px;
+  padding: 3% 0;
+}
+
+ .hl-n {
+  padding-right: 9%;
+}
+
+.hl-p {
+  padding-right: 17%;
+}
+
+.hl-n,
+.hl-p {
+  color: grey;
+  padding-left: 1%;
+  font-weight: 100;
+  display: inline-block;
+}
+
+/* Switch Button Design */
+
+.lb {
+  width: 60px;
+  height: 21px;
+  top: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.lb input {
+  display: none;
+}
+
+.lb .slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #494554;
+  border: 1px solid #DBDBDC;
+  border-radius: 30px;
+  transition: all .2s ease-out;
+}
+
+/* Slider doggle */
+.lb .slider::before {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  left: 2px;
+  top:2px;
+  border: 1px solid #DBDBDC;
+  border-radius: 50%;
+  transition: all .2s ease-out;
+}
+
+/* Slider Text/Content */
+.lb .slider::after {
+  content: 'OFF';
+  position: absolute;
+  font-size: 12px;
+  color: #fff;
+  left: 30px;
+  top: 2px;
+}
+
+.lb input:checked + .slider{
+  background-color: #6760a9;
+}
+
+.lb input:checked + .slider::before{
+  left: 40px;
+}
+
+.lb input:checked + .slider::after{
+  content: 'ON';
+  left: 2px;
+}
+
+/* Dropdown Select */
+
+.input-text {
+  width: 90%;
+  border-radius: 8px;
+  max-width: 100%;
+  font-size: 15px;
+  margin-top: 13%;
+  margin-left: 1%;
+}
+
+/* Save and Cancel buttons */
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 4.5% 0 0 1%;
+}
+
+.save,
+.cancel {
+  font-size: 15px;
+  width: 48%;
+  padding: 2.5%;
+  border-radius: 8px;
+  font-weight: 100;
+}
+
+.save {
+  background-color: #6760a9;
+  color: #fff;
+  margin-right: 3%
+}
+
+.cancel {
+  background-color: #494554;
+  color: #fff;
+  margin-left: 3%;
+}
+
+/* Meadia Queries */
+
+@media(min-width : 500px) {
+  .trf-chrt {
+    width: 65vh;
+    height: 34vh;
+  }
+
+  .dly-style {
+    width: 35vh;
+    height: 17vh;
+  }
+
+  .mbl-style {
+    width: 33vh;
+    height: 17vh;
+  }
+
+  .legend {
+    left: 74%;
+    bottom: 120px;
+  }
+
+  .wdgt {
+    width: 45%;
+  }
+
+  .msg-area {
+    width: 84%;
+  }
+
+  .msg-submit {
+    width: 89%;
+  }
+
+  .hl-p {
+    padding-right: 14%;
+  }
+}
+
+@media(min-width : 768px) {
+
+  #main-container {
+    flex-flow: row;
+  }
+
+  #nav-bar {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 6%;
+  }
+
+  .nav-icon {
+    padding: 28%;
+  }
+
+  .nav-icon:nth-of-type(1) {
+    border: none;
+    border-left: 2px solid #7DBE6F;
+  }
+
+  .srch-fld
+   {
+    width: 40%;
+    margin-left: 57%;
+  }
+
+  .trf-chrt {
+    width: 85vh;
+    height: 46vh;
+  }
+
+  .dly-mbl {
+    display:flex;
+    flex-flow: row;
+  }
+
+  .legend {
+    left: 80%;
+    bottom: 120px;
+  }
+
+  .wdgt {
+    width: 32%;
+  }
+
+ .new-rcnt {
+    display: flex;
+  }
+
+  .new-members,
+  .recent-activity {
+    width: 50%;
+  }
+
+  .msg-area {
+    width: 84.5%;
+  }
+
+  .msg-submit {
+    width: 92%;
+  }
+
+  .hl-p {
+    padding-right: 17%;
+  }
+
+  .mssngr-sttng {
+    display: flex;
+  }
+
+  .msg-usr,
+  .usr-set {
+    width: 50%;
+  }
+
+}
+
+@media(min-width : 1020px){
+  .trf-chrt {
+    width: 110vh;
+    height: 57vh;
+  }
+
+  .dly-style {
+    width: 50vh;
+    height: 23vh;
+  }
+
+  .mbl-style {
+    width: 50vh;
+    height: 23vh;
+  }
+  .legend {
+    left: 80%;
+    bottom: 130px;
+  }
+
+  .wdgt {
+    width: 25%;
+  }
+
+  .hl-p {
+    padding-right: 16%;
+  }
+
+  .input-text {
+    margin-top: 6.5%;
+  }
+
+}
